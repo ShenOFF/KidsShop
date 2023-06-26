@@ -1,0 +1,91 @@
+﻿<Page x:Class="HappyKids.Pages.AddItems"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HappyKids.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="800"
+      Title="AddItems">
+
+    <Grid>
+
+        <Border CornerRadius="10,10,10,10">
+            <Border.Background>
+                <SolidColorBrush Color="White" Opacity="1.0"/>
+            </Border.Background>
+            <Grid>
+
+                <Grid.Resources>
+                    <ResourceDictionary Source="/Resource/BtnRes.xaml" />
+                </Grid.Resources>
+                <ScrollViewer x:Name="scroll_reg">
+                    <Border x:Name="Info_user" MinHeight="530">
+                        <Grid>
+                            <Label x:Name="main_label" Content="Добавление товара " Margin="39,28,26,0" Foreground="Black" FontSize="30" FontFamily="Yu 
+                               Gothic UI Semibold"
+                               HorizontalContentAlignment="Left" Height="52" VerticalAlignment="Top"/>
+                            <Label Content="Название товара" Margin="39,85,232,0" Foreground="Black" FontSize="15" FontFamily="Yu
+                               Gothic UI Semilight"
+                               HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                            <TextBox Style="{StaticResource BaseBox}" x:Name="tb_name" Height="35"
+                                 Background="#FFDEDEDE" Margin="39,112,28,0"
+                                 VerticalAlignment="Top"/>
+                            <Label Content="Цена товара" Margin="39,149,232,0" Foreground="Black" FontSize="15"
+                               FontFamily="Yu Gothic UI Semilight"
+                               HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                            <TextBox Style="{StaticResource BaseBox}" x:Name="tb_price" Height="35"
+                                 Background="#FFDEDEDE" Margin="39,176,26,0"
+                                 VerticalAlignment="Top"/>
+                            <Label Content="Кол-во на складе" Margin="39,210,232,0" Foreground="Black" FontSize="15"
+                               FontFamily="Yu Gothic UI Semilight"
+                               HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                            <TextBox Style="{StaticResource BaseBox}" x:Name="tb_count_storage" Height="35"
+                                 Background="#FFDEDEDE" Margin="39,240,26,0"
+                                 VerticalAlignment="Top"/>
+                            <Label Content="Возраст(от скольки лет)" Margin="39,275,232,0" Foreground="Black" FontSize="15"
+                               FontFamily="Yu Gothic UI Semilight"
+                               HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                            <TextBox Style="{StaticResource BaseBox}" x:Name="tb_old" Height="35"
+                                 Background="#FFDEDEDE" Margin="39,305,26,0"
+                                 VerticalAlignment="Top"/>
+                            <Label Content="Вес" Margin="39,335,232,0" Foreground="Black" FontSize="15"
+                               FontFamily="Yu Gothic UI Semilight"
+                               HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                            <TextBox Style="{StaticResource BaseBox}" x:Name="tb_weight" Height="35"
+                                 Background="#FFDEDEDE" Margin="39,365,26,0"
+                                 VerticalAlignment="Top"/>
+                            <Label Content="Описание (максимум 100 символов)" Margin="39,400,232,0" Foreground="Black" FontSize="15"
+                               FontFamily="Yu Gothic UI Semilight"
+                               HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                            <TextBox Style="{StaticResource BaseBox}" x:Name="tb_description" Height="35"
+                                 Background="#FFDEDEDE" Margin="39,430,26,0"
+                                 VerticalAlignment="Top"/>
+                            <Button Background="Orange" Content="Выбрать картинку"  Style="{StaticResource BtnRedac}" Margin="39,500,0,0" VerticalAlignment="Top"
+                                Height="40" Click="Click_Image_Items" HorizontalAlignment="Left" Width="146"/>
+                            <Button Style="{StaticResource BtnRedac}" Margin="30,0,136.2,24" VerticalAlignment="Bottom"
+                                Height="40" HorizontalAlignment="Left"
+                                Width="105" Click="Click_Reg_Accept">
+                                <Image Source="/img/redac.png" Width="20" Height="20"/>
+                            </Button>
+                            <Button x:Name="btn_cancel" Style="{StaticResource BtnRedac}" Background="#FFE48F2B"
+                                Margin="0,0,26.2,24"
+                                VerticalAlignment="Bottom" Height="40" HorizontalAlignment="Right" Width="105"
+                                Click="Click_Main_Page">
+                                <Image Source="/img/back.png" Width="20" Height="20"/>
+                            </Button>
+                            <Image x:Name="src"  Source="/img/BackBear.jpg" Width="170" Margin="200,500,0,0" Height="113" HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+                            <!--<Button x:Name="btn_remove" Style="{StaticResource BtnRedac}" Background="#FFE42B2B"
+                                Margin="30,0,0,23.6"
+                                VerticalAlignment="Bottom" Height="40" Click="Click_Remove_User_Redact"
+                                HorizontalAlignment="Left" Width="105">
+                            <Image Source="/img/del.png" Width="20" Height="20"/>
+                        </Button>-->
+                        </Grid>
+                    </Border>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
